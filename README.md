@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo.png" alt="homeassistant-with-ai" width="140">
+</p>
+
 # Somfy Bridge — Somfy io-homecontrol besturen via Home Assistant (ESP32, lokaal, zonder cloud)
 
 ![Somfy Bridge — io-homecontrol naar Home Assistant, ESP32-S3, MQTT, geen cloud](docs/social-preview.png)

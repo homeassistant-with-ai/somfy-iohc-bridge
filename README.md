@@ -5,12 +5,12 @@
 *Ook beschikbaar in het [Engels / English](README.en.md).*
 
 [![Tests](https://github.com/homeassistant-with-ai/somfy-iohc-bridge/actions/workflows/tests.yml/badge.svg)](https://github.com/homeassistant-with-ai/somfy-iohc-bridge/actions/workflows/tests.yml)
-[![Licentie: MIT](https://img.shields.io/badge/licentie-MIT-green.svg)](LICENSE)
+[![Licentie: CC BY-NC 4.0](https://img.shields.io/badge/licentie-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
 [![Platform: ESP32-S3](https://img.shields.io/badge/platform-ESP32--S3-blue.svg)](platformio.ini)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-MQTT%20Discovery-41BDF5.svg)](#home-assistant-configuratie)
 [![Geen cloud nodig](https://img.shields.io/badge/cloud-niet%20nodig-success.svg)](#credits)
 
-Door [homeassistant-with-ai](https://github.com/homeassistant-with-ai) — vrij te gebruiken/aan te passen/te forken, zie [LICENSE](LICENSE).
+Door [homeassistant-with-ai](https://github.com/homeassistant-with-ai) — vrij te gebruiken, aan te passen en te forken voor **niet-commerciële** doeleinden, met verplichte naamsvermelding/link naar de bron. Niet toegestaan: doorverkopen (ook niet aangepast, of als voorgeflashte hardware). Zie [LICENSE](LICENSE) (CC BY-NC 4.0).
 
 **Goedkoop, open-source alternatief voor de Somfy TaHoma Switch en de Somfy
 Connectivity Kit.** Deze DIY Somfy-bridge maakt een Somfy io-homecontrol
@@ -26,7 +26,7 @@ andere internetdienst. Draait op een goedkope **ESP32-S3 + SX1262**-radio
 |---|---|---|---|
 | Richtprijs\* | ±€130–150 | ±€100–130 | **±€20–25** (Heltec WiFi LoRa32 V3) |
 | Cloud/account nodig | Ja (Somfy-cloud) | Ja (Somfy-cloud) | **Nee — volledig lokaal** |
-| Open source | Nee | Nee | **Ja (MIT-licentie)** |
+| Open source | Nee | Nee | **Ja (CC BY-NC 4.0 — niet-commercieel, naamsvermelding verplicht)** |
 | Aanpasbaar/uitbreidbaar | Nee | Nee | **Ja — volledige broncode** |
 | Werkt bij internetuitval | Nee (cloud-afhankelijk) | Nee (cloud-afhankelijk) | **Ja** |
 

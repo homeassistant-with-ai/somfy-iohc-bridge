@@ -5,12 +5,12 @@
 *Also available in [Dutch / Nederlands](README.md).*
 
 [![Tests](https://github.com/homeassistant-with-ai/somfy-iohc-bridge/actions/workflows/tests.yml/badge.svg)](https://github.com/homeassistant-with-ai/somfy-iohc-bridge/actions/workflows/tests.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
 [![Platform: ESP32-S3](https://img.shields.io/badge/platform-ESP32--S3-blue.svg)](platformio.ini)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-MQTT%20Discovery-41BDF5.svg)](#home-assistant-configuration)
 [![No cloud required](https://img.shields.io/badge/cloud-not%20required-success.svg)](#credits)
 
-By [homeassistant-with-ai](https://github.com/homeassistant-with-ai) — free to use/modify/fork, see [LICENSE](LICENSE).
+By [homeassistant-with-ai](https://github.com/homeassistant-with-ai) — free to use, modify, and fork for **non-commercial** purposes, with mandatory attribution/link back to the source. Not permitted: reselling (including modified versions, or as pre-flashed hardware). See [LICENSE](LICENSE) (CC BY-NC 4.0).
 
 **A cheap, open-source alternative to the Somfy TaHoma Switch and the
 Somfy Connectivity Kit.** This DIY Somfy bridge makes a Somfy
@@ -27,7 +27,7 @@ cloud account, or any other internet service. Runs on an inexpensive
 |---|---|---|---|
 | Approx. price\* | ~€130–150 | ~€100–130 | **~€20–25** (Heltec WiFi LoRa32 V3) |
 | Cloud/account required | Yes (Somfy cloud) | Yes (Somfy cloud) | **No — fully local** |
-| Open source | No | No | **Yes (MIT license)** |
+| Open source | No | No | **Yes (CC BY-NC 4.0 — non-commercial, attribution required)** |
 | Customizable/extensible | No | No | **Yes — full source code** |
 | Works during an internet outage | No (cloud-dependent) | No (cloud-dependent) | **Yes** |
 

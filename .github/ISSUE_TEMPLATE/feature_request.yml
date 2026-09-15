@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest an idea for this project
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Note: this project only supports authorized use of your own equipment
+        via the normal PROG pairing procedure — see [SECURITY.md](../SECURITY.md)
+        and [CONTRIBUTING.md](../CONTRIBUTING.md). Requests for replay attacks,
+        brute-forcing, or bypassing io-homecontrol security will be declined.

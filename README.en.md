@@ -1,7 +1,10 @@
 # Somfy Bridge — Control Somfy io-homecontrol from Home Assistant (ESP32, local, no cloud)
 
+![Somfy Bridge — io-homecontrol to Home Assistant, ESP32-S3, MQTT, no cloud](docs/social-preview.png)
+
 *Also available in [Dutch / Nederlands](README.md).*
 
+[![Tests](https://github.com/homeassistant-with-ai/somfy-iohc-bridge/actions/workflows/tests.yml/badge.svg)](https://github.com/homeassistant-with-ai/somfy-iohc-bridge/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform: ESP32-S3](https://img.shields.io/badge/platform-ESP32--S3-blue.svg)](platformio.ini)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-MQTT%20Discovery-41BDF5.svg)](#home-assistant-configuration)

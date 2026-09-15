@@ -1,0 +1,53 @@
+name: Bug report
+description: Something isn't working as expected (pairing, MQTT, Home Assistant, RX-sniffing, build)
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug! Please do **not** include your WiFi/MQTT credentials
+        or your Somfy remote's real RF address in any field below — redact them if a
+        serial log line contains them.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Firmware build / PlatformIO
+        - Somfy pairing
+        - Button commands (OPEN/CLOSE/STOP)
+        - RX-sniffing (original Situo detection)
+        - MQTT / Home Assistant discovery
+        - OLED display
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: board
+    attributes:
+      label: Board
+      placeholder: Heltec WiFi LoRa32 V3
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant serial log output
+      description: Paste the relevant `pio device monitor` output. Redact any credentials or your remote's real address first.
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?

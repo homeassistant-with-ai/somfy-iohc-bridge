@@ -1,0 +1,62 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  host-tests:
+    name: Host-native protocol tests (g++)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install OpenSSL dev headers
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+
+      - name: test_crc
+        working-directory: test
+        run: g++ -std=c++17 -I ../lib/iohc -o /tmp/t_crc test_crc.cpp && /tmp/t_crc
+
+      - name: test_crypto
+        working-directory: test
+        run: g++ -std=c++17 -I ../lib/iohc -o /tmp/t_crypto test_crypto.cpp ../lib/iohc/iohc_crypto.cpp -lcrypto && /tmp/t_crypto
+
+      - name: test_frame
+        working-directory: test
+        run: g++ -std=c++17 -I ../lib/iohc -o /tmp/t_frame test_frame.cpp ../lib/iohc/iohc_frame.cpp && /tmp/t_frame
+
+      - name: test_commands
+        working-directory: test
+        run: g++ -std=c++17 -I ../lib/iohc -o /tmp/t_commands test_commands.cpp ../lib/iohc/iohc_commands.cpp ../lib/iohc/iohc_frame.cpp ../lib/iohc/iohc_crypto.cpp -lcrypto && /tmp/t_commands
+
+      - name: test_phy
+        working-directory: test
+        run: g++ -std=c++17 -I ../lib/iohc -o /tmp/t_phy test_phy.cpp ../lib/iohc/iohc_phy.cpp && /tmp/t_phy
+
+      - name: test_phy_decode
+        working-directory: test
+        run: g++ -std=c++17 -I ../lib/iohc -o /tmp/t_phy_decode test_phy_decode.cpp ../lib/iohc/iohc_phy.cpp ../lib/iohc/iohc_commands.cpp ../lib/iohc/iohc_frame.cpp ../lib/iohc/iohc_crypto.cpp -lcrypto && /tmp/t_phy_decode
+
+  firmware-build:
+    name: PlatformIO firmware build (Heltec WiFi LoRa32 V3)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PlatformIO
+        run: pip install -U platformio
+
+      - name: Provide a placeholder secrets.h
+        run: cp include/secrets.h.example include/secrets.h
+
+      - name: Build firmware
+        run: pio run
